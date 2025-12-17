@@ -540,13 +540,18 @@
       }
 
       /* ====== BUDAYA & PENDIDIKAN ====== */
-      .pill-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-top: 0.7rem;
-        font-size: 0.85rem;
-      }
+         /* ===== Interaktif Timeline ===== */
+    .timeline-item{cursor:pointer; transition:0.2s;}
+    .timeline-text{max-height:0; overflow:hidden; transition:max-height 0.3s ease, padding 0.3s ease;}
+    .timeline-item.active .timeline-text{max-height:200px; padding-top:0.3rem;}
+    
+    /* ===== Pill List Hover ===== */
+    .pill-item{
+      display:inline-block; margin:0.3rem; padding:0.4rem 0.8rem;
+      border-radius:999px; background:#1f2937; color:#e5e7eb; cursor:pointer;
+      transition:0.2s;
+    }
+    .pill-item.active, .pill-item:hover{background:#3b82f6; color:#fff; transform:translateY(-2px);}
 
       .pill-item {
         padding: 0.35rem 0.7rem;
@@ -591,6 +596,7 @@
         text-align: center;
         color: #e5e7eb;
       }
+
     </style>
   </head>
 
@@ -631,9 +637,6 @@
             <span>3 negara maju Asia Timur</span>
             <span>Fokus destinasi turis</span>
             <span>Visual interaktif</span>
-          </div>
-          <div class="hero-actions">
-            <button class="btn-primary">Mulai dari daftar negara</button>
           </div>
         </div>
 
@@ -707,10 +710,7 @@
       <section class="country-detail" id="detail-china">
         <div class="section">
           <h2 class="section-title">Perkembangan Teknologi di Tiongkok</h2>
-          <p class="section-desc">
-            Tiongkok berkembang dari ekonomi berbasis manufaktur menjadi salah
-            satu pusat teknologi global.
-          </p>
+          <p class="section-desc"></p>
 
           <div class="timeline">
             <div class="timeline-item">
@@ -750,42 +750,38 @@
               <span class="pill-item">Kuliner dimsum & hotpot</span>
             </div>
 
-            <h3 class="section-title" style="margin-top: 1.5rem">Pendidikan</h3>
+          <h3 class="section-title" style="margin-top: 1.5rem">Pendidikan</h3>
             <ul class="edu-list">
-              <li>
-                Sistem pendidikan sangat kompetitif, terutama pada jenjang SMA
-                dan universitas.
-              </li>
-              <li>
-                Universitas ternama seperti Tsinghua dan Peking University
-                dikenal di tingkat global.
-              </li>
-              <li>Fokus kuat pada STEM, riset, dan inovasi teknologi.</li>
+            <li>
+            Sistem pendidikan di Tiongkok sangat kompetitif, terutama pada jenjang SMA
+            dan pendidikan tinggi.
+            </li>
+            <li>
+            Ujian nasional <strong>Gaokao</strong> menjadi penentu utama kelulusan dan
+            penerimaan mahasiswa ke universitas, dengan tingkat persaingan yang sangat tinggi.
+            </li>
+            <li>
+            Universitas ternama seperti <strong>Tsinghua University</strong> dan
+            <strong>Peking University</strong> dikenal di tingkat global.
+            </li>
+            <li>
+            Pendidikan menekankan bidang <strong>STEM</strong>, riset ilmiah, dan inovasi teknologi.
+            </li>
             </ul>
-          </div>
-
+            <br>
           <div>
             <h3 class="section-title">Destinasi Turis Populer</h3>
             <div class="dest-grid">
               <div class="dest-card">
-                <img
-                  src="https://images.pexels.com/photos/1738995/pexels-photo-1738995.jpeg?auto=compress&dpr=2&w=600"
-                  alt="Beijing"
-                />
+                <img src="beijing.jpeg" alt="Beijing" />
                 <p>Beijing – Kota Terlarang & Tiananmen</p>
               </div>
               <div class="dest-card">
-                <img
-                  src="https://images.pexels.com/photos/3584430/pexels-photo-3584430.jpeg?auto=compress&dpr=2&w=600"
-                  alt="Great Wall"
-                />
+                <img src="greatwall.jpg" alt="Great Wall" />
                 <p>Tembok Besar Tiongkok</p>
               </div>
               <div class="dest-card">
-                <img
-                  src="https://images.pexels.com/photos/2470658/pexels-photo-2470658.jpeg?auto=compress&dpr=2&w=600"
-                  alt="Shanghai"
-                />
+                <img src="shanghai.jpg" alt="Shanghai" />
                 <p>Shanghai – Skyline futuristik di Pudong</p>
               </div>
             </div>
@@ -852,24 +848,15 @@
             <h3 class="section-title">Destinasi Turis Populer</h3>
             <div class="dest-grid">
               <div class="dest-card">
-                <img
-                  src="https://images.pexels.com/photos/2087748/pexels-photo-2087748.jpeg?auto=compress&dpr=2&w=600"
-                  alt="Tokyo"
-                />
+                <img src="tokyo.jpg" alt="Tokyo"/>
                 <p>Tokyo – Kota metropolitan super sibuk</p>
               </div>
               <div class="dest-card">
-                <img
-                  src="https://images.pexels.com/photos/46250/mt-fuji-japan-mountain-landmark-46250.jpeg?auto=compress&dpr=2&w=600"
-                  alt="Fuji"
-                />
+                <img src="gunungfuji.jpg" alt="Fuji"/>
                 <p>Gunung Fuji & danau sekitarnya</p>
               </div>
               <div class="dest-card">
-                <img
-                  src="https://images.pexels.com/photos/210547/pexels-photo-210547.jpeg?auto=compress&dpr=2&w=600"
-                  alt="Kyoto"
-                />
+                <img src="kyoto.jpg"alt="Kyoto"/>
                 <p>Kyoto – Kuil, shrine, & lorong torii</p>
               </div>
             </div>
@@ -937,24 +924,15 @@
             <h3 class="section-title">Destinasi Turis Populer</h3>
             <div class="dest-grid">
               <div class="dest-card">
-                <img
-                  src="https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&dpr=2&w=600"
-                  alt="Seoul"
-                />
+                <img src="gyeongbokgung.jpg"alt="Seoul"/>
                 <p>Seoul – Kota modern & istana kerajaan</p>
               </div>
               <div class="dest-card">
-                <img
-                  src="https://images.pexels.com/photos/237211/pexels-photo-237211.jpeg?auto=compress&dpr=2&w=600"
-                  alt="Busan"
-                />
+                <img src="busan.jpg" alt="Busan"/>
                 <p>Busan – Pantai & kota pelabuhan</p>
               </div>
               <div class="dest-card">
-                <img
-                  src="https://images.pexels.com/photos/2373225/pexels-photo-2373225.jpeg?auto=compress&dpr=2&w=600"
-                  alt="Jeju"
-                />
+                <img src="jeju.jpg" alt="Jeju"/>
                 <p>Pulau Jeju – Wisata alam dan resort</p>
               </div>
             </div>
@@ -1029,3 +1007,4 @@
     </script>
   </body>
 </html>
+
